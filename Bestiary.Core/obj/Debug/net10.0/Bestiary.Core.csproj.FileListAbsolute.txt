@@ -1,0 +1,14 @@
+C:\Projects\Rider\Bestiary\Bestiary.Core\bin\Debug\net10.0\Bestiary.Core.exe
+C:\Projects\Rider\Bestiary\Bestiary.Core\bin\Debug\net10.0\Bestiary.Core.deps.json
+C:\Projects\Rider\Bestiary\Bestiary.Core\bin\Debug\net10.0\Bestiary.Core.runtimeconfig.json
+C:\Projects\Rider\Bestiary\Bestiary.Core\bin\Debug\net10.0\Bestiary.Core.dll
+C:\Projects\Rider\Bestiary\Bestiary.Core\bin\Debug\net10.0\Bestiary.Core.pdb
+C:\Projects\Rider\Bestiary\Bestiary.Core\obj\Debug\net10.0\Bestiary.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projects\Rider\Bestiary\Bestiary.Core\obj\Debug\net10.0\Bestiary.Core.AssemblyInfoInputs.cache
+C:\Projects\Rider\Bestiary\Bestiary.Core\obj\Debug\net10.0\Bestiary.Core.AssemblyInfo.cs
+C:\Projects\Rider\Bestiary\Bestiary.Core\obj\Debug\net10.0\Bestiary.Core.csproj.CoreCompileInputs.cache
+C:\Projects\Rider\Bestiary\Bestiary.Core\obj\Debug\net10.0\Bestiary.Core.dll
+C:\Projects\Rider\Bestiary\Bestiary.Core\obj\Debug\net10.0\refint\Bestiary.Core.dll
+C:\Projects\Rider\Bestiary\Bestiary.Core\obj\Debug\net10.0\Bestiary.Core.pdb
+C:\Projects\Rider\Bestiary\Bestiary.Core\obj\Debug\net10.0\Bestiary.Core.genruntimeconfig.cache
+C:\Projects\Rider\Bestiary\Bestiary.Core\obj\Debug\net10.0\ref\Bestiary.Core.dll

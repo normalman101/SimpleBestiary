@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "Bestiary.Core/1.0.0": {
+        "runtime": {
+          "Bestiary.Core.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Bestiary.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
