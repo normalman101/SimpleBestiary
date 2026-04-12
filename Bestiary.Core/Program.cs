@@ -1,9 +1,5 @@
-﻿// See https://aka.ms/new-console-template for more information
-
-using System;
-using Bestiary.Core;
+﻿using System.Collections.Generic;
 using Bestiary.Core.Monster;
-using Bestiary.Core.Monster.Factory;
 
 Boss boss = new Boss.Builder()
     .SetName("Boss")
@@ -13,4 +9,9 @@ Boss boss = new Boss.Builder()
     .SetElement("Fire")
     .Build();
 
-boss.Action();
+
+var dragon = new AncientDragon();
+var dragonWrapper = new AncientDragonAdapter(dragon);
+
+var monsters2 = new List<IMonster> {boss, dragonWrapper};
+monsters2.ForEach(m => m.Action());
