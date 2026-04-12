@@ -12,3 +12,4 @@ C:\Projects\Rider\Bestiary\Bestiary.Core\obj\Debug\net10.0\refint\Bestiary.Core.
 C:\Projects\Rider\Bestiary\Bestiary.Core\obj\Debug\net10.0\Bestiary.Core.pdb
 C:\Projects\Rider\Bestiary\Bestiary.Core\obj\Debug\net10.0\Bestiary.Core.genruntimeconfig.cache
 C:\Projects\Rider\Bestiary\Bestiary.Core\obj\Debug\net10.0\ref\Bestiary.Core.dll
+C:\Projects\Rider\Bestiary\Bestiary.Core\obj\Debug\net10.0\Bestiary.Core.sourcelink.json

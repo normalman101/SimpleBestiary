@@ -1,0 +1,97 @@
+﻿using System;
+
+namespace Bestiary.Core.Monster;
+
+public class Boss : IMonster
+{
+    public string? Name { get; private set; }
+    public uint? Health { get; private set; }
+    public uint? Mana { get; private set; }
+    public uint? Strength { get; private set; }
+    public uint? Agility { get; private set; }
+    public uint? Intelligence { get; private set; }
+    public string? WeaponType { get; private set; }
+    public string? ArmorType { get; private set; }
+    public string? Element { get; private set; }
+    public bool? IsImmortal { get; private set; }
+    public string? SpecialAbilityName { get; private set; }
+
+    public class Builder
+    {
+        private readonly Boss _product = new Boss();
+        
+        public Builder SetName(string name)
+        {
+            _product.Name = name;
+            return this;
+        }
+
+        public Builder SetHealth(uint health)
+        {
+            _product.Health = health;
+            return this;
+        }
+
+        public Builder SetMana(uint mana)
+        {
+            _product.Mana = mana;
+            return this;
+        }
+
+        public Builder SetStrength(uint strength)
+        {
+            _product.Strength = strength;
+            return this;
+        }
+
+        public Builder SetAgility(uint agility)
+        {
+            _product.Agility = agility;
+            return this;
+        }
+
+        public Builder SetIntelligence(uint intelligence)
+        {
+            _product.Intelligence = intelligence;
+            return this;
+        }
+
+        public Builder SetWeaponType(string weaponType)
+        {
+            _product.WeaponType = weaponType;
+            return this;
+        }
+
+        public Builder SetArmorType(string armorType)
+        {
+            _product.ArmorType = armorType;
+            return this;
+        }
+
+        public Builder SetElement(string element)
+        {
+            _product.Element = element;
+            return this;
+        }
+
+        public Builder SetImmortality(bool isImmortal)
+        {
+            _product.IsImmortal = isImmortal;
+            return this;
+        }
+
+        public Builder SetSpecialAbilityName(string specialAbilityName)
+        {
+            _product.SpecialAbilityName = specialAbilityName;
+            return this;
+        }
+
+        public Boss Build() => _product;
+
+    }
+
+    public void Action()
+    {
+        Console.WriteLine("Бъёт кувалдой");
+    }
+}
