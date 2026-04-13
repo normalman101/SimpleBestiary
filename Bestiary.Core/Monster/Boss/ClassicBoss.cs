@@ -1,9 +1,10 @@
 ﻿using System;
+using Bestiary.Core.Monster.Biome;
 using Bestiary.Core.Monster.Weapon;
 
 namespace Bestiary.Core.Monster.Boss;
 
-public class ClassicBoss(uint health, IDamaging weapon) : MonsterBase(health, weapon)
+public class ClassicBoss(uint health, IBiome biome, IDamaging weapon) : MonsterBase(health, biome, weapon)
 {
     public string? Name { get; private set; }
     public uint? Mana { get; private set; }
@@ -21,9 +22,9 @@ public class ClassicBoss(uint health, IDamaging weapon) : MonsterBase(health, we
         Console.WriteLine("Бъёт кувалдой");
     }
     
-    public class Builder(uint health, IDamaging weapon)
+    public class Builder(uint health, IBiome biome, IDamaging weapon)
     {
-        private readonly ClassicBoss _product = new ClassicBoss(health, weapon);
+        private readonly ClassicBoss _product = new ClassicBoss(health, biome, weapon);
         
         public Builder SetName(string name)
         {

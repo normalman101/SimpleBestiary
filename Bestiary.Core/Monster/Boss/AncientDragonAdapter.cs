@@ -1,8 +1,9 @@
-﻿using Bestiary.Core.Monster.Weapon;
+﻿using Bestiary.Core.Monster.Biome;
+using Bestiary.Core.Monster.Weapon;
 
 namespace Bestiary.Core.Monster.Boss;
 
-public class AncientDragonAdapter(AncientDragon ancientDragon, uint health, IDamaging weapon) : MonsterBase(health, weapon)
+public class AncientDragonAdapter(AncientDragon ancientDragon, uint health, IBiome biome, IDamaging weapon) : MonsterBase(health, biome, weapon)
 {
     public AncientDragon AncientDragon { get; } = ancientDragon;
 

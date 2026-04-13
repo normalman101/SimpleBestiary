@@ -1,9 +1,10 @@
 ﻿using System;
+using Bestiary.Core.Monster.Biome;
 using Bestiary.Core.Monster.Weapon;
 
 namespace Bestiary.Core.Monster.Classic;
 
-public class Goblin(uint health, IDamaging weapon) : MonsterBase(health, weapon)
+public class Goblin(uint health, IBiome biome, IDamaging weapon) : MonsterBase(health, biome, weapon)
 {
     public override void Action(MonsterBase monster)
     {
