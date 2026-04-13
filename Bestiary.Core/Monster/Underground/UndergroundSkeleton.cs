@@ -8,6 +8,6 @@ public class UndergroundSkeleton(uint health, IDamaging weapon) : MonsterBase(he
     public override void Action(MonsterBase monster)
     {
         Console.WriteLine("Подземный скелет стреляет из лука заострёнными тонкими камнями");
-        Weapon.TakeDamage(monster);
+        Weapon.ApplyDamage(monster);
     }
 }

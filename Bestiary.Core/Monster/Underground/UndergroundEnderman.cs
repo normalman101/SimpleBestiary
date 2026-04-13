@@ -8,6 +8,6 @@ public class UndergroundEnderman(uint health, IDamaging weapon) : MonsterBase(he
     public override void Action(MonsterBase monster)
     {
         Console.WriteLine("Подземный эндермен атакует, телепортируясь");
-        Weapon.TakeDamage(monster);
+        Weapon.ApplyDamage(monster);
     }
 }

@@ -8,6 +8,6 @@ public class UndergroundCreeper(uint health, IDamaging weapon) : MonsterBase(hea
     public override void Action(MonsterBase monster)
     {
         Console.WriteLine("Подземный крипер шахидничает");
-        Weapon.TakeDamage(monster);
+        Weapon.ApplyDamage(monster);
     }
 }

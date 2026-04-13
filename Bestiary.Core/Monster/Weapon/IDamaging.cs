@@ -2,5 +2,5 @@
 
 public interface IDamaging
 {
-    void TakeDamage(MonsterBase monster);
+    void ApplyDamage(MonsterBase monster);
 }

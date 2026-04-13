@@ -8,6 +8,6 @@ public class Orc(uint health, IDamaging weapon) : MonsterBase(health, weapon)
     public override void Action(MonsterBase monster)
     {
         Console.WriteLine("Орк замахивается дубиной");
-        Weapon.TakeDamage(monster);
+        Weapon.ApplyDamage(monster);
     }
 }

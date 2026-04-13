@@ -8,6 +8,6 @@ public class ForestEnderman(uint health, IDamaging weapon) : MonsterBase(health,
     public override void Action(MonsterBase monster)
     {
         Console.WriteLine("Лесной эндермен атакует, телепортируясь");
-        Weapon.TakeDamage(monster);
+        Weapon.ApplyDamage(monster);
     }
 }

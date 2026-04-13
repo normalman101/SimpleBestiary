@@ -8,6 +8,6 @@ public class ForestSkeleton(uint health, IDamaging weapon) : MonsterBase(health,
     public override void Action(MonsterBase monster)
     {
         Console.WriteLine("Лесной скелет стреляет из лука палками");
-        Weapon.TakeDamage(monster);
+        Weapon.ApplyDamage(monster);
     }
 }

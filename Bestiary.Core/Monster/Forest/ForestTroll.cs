@@ -8,6 +8,6 @@ public class ForestTroll(uint health, IDamaging weapon) : MonsterBase(health, we
     public override void Action(MonsterBase monster)
     {
         Console.WriteLine("Лесной тролль кидает огромное бревно");
-        Weapon.TakeDamage(monster);
+        Weapon.ApplyDamage(monster);
     }
 }

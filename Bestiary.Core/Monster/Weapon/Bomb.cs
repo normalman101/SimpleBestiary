@@ -2,7 +2,7 @@
 
 public class Bomb : IDamaging
 {
-    public void TakeDamage(MonsterBase monster)
+    public void ApplyDamage(MonsterBase monster)
     {
         monster.Health -= 50;
     }

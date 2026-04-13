@@ -8,6 +8,6 @@ public class UndergroundTroll(uint health, IDamaging weapon) : MonsterBase(healt
     public override void Action(MonsterBase monster)
     {
         Console.WriteLine("Подземный тролль кидает огромный булыжник");
-        Weapon.TakeDamage(monster);
+        Weapon.ApplyDamage(monster);
     }
 }

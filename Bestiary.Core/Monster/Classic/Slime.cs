@@ -8,6 +8,6 @@ public class Slime(uint health, IDamaging weapon) : MonsterBase(health, weapon)
     public override void Action(MonsterBase monster)
     {
         Console.WriteLine("Слизень прыгает, атакуя");
-        Weapon.TakeDamage(monster);
+        Weapon.ApplyDamage(monster);
     }
 }

@@ -8,6 +8,6 @@ public class UndergroundGoblin(uint health, IDamaging weapon) : MonsterBase(heal
     public override void Action(MonsterBase monster)
     {
         Console.WriteLine("Подземный гоблин тычет заострённым камнем");
-        Weapon.TakeDamage(monster);
+        Weapon.ApplyDamage(monster);
     }
 }

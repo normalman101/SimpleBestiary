@@ -2,7 +2,7 @@
 
 public class Fists : IDamaging
 {
-    public void TakeDamage(MonsterBase monster)
+    public void ApplyDamage(MonsterBase monster)
     {
         monster.Health -= 5;
     }

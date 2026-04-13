@@ -4,7 +4,7 @@ namespace Bestiary.Core.Monster.Weapon;
 
 public class Sword : IDamaging
 {
-    public void TakeDamage(MonsterBase monster)
+    public void ApplyDamage(MonsterBase monster)
     {
         monster.Health -= 20;
     }

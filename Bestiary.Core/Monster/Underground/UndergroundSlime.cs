@@ -8,6 +8,6 @@ public class UndergroundSlime(uint health, IDamaging weapon) : MonsterBase(healt
     public override void Action(MonsterBase monster)
     {
         Console.WriteLine("Подземный слизень прыгает, атакуя");
-        Weapon.TakeDamage(monster);
+        Weapon.ApplyDamage(monster);
     }
 }

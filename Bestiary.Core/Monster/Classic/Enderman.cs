@@ -9,6 +9,6 @@ public class Enderman(uint health, IDamaging weapon) : MonsterBase(health, weapo
     public override void Action(MonsterBase monster)
     {
         Console.WriteLine("Эндермен атакует, телепортируясь");
-        Weapon.TakeDamage(monster);
+        Weapon.ApplyDamage(monster);
     }
 }

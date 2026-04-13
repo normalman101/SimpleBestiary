@@ -8,6 +8,6 @@ public class Creeper(uint health, IDamaging weapon) : MonsterBase(health, weapon
     public override void Action(MonsterBase monster)
     {
         Console.WriteLine("Крипер шахидничает");
-        Weapon.TakeDamage(monster);
+        Weapon.ApplyDamage(monster);
     }
 }

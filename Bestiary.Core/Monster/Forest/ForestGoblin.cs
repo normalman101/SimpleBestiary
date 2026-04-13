@@ -8,6 +8,6 @@ public class ForestGoblin(uint health, IDamaging weapon) : MonsterBase(health, w
     public override void Action(MonsterBase monster)
     {
         Console.WriteLine("Лесной гоблин тычет палкой");
-        Weapon.TakeDamage(monster);
+        Weapon.ApplyDamage(monster);
     }
 }

@@ -8,6 +8,6 @@ public class UndergroundOrc(uint health, IDamaging weapon) : MonsterBase(health,
     public override void Action(MonsterBase monster)
     {
         Console.WriteLine("Подземный орк замахивается длинным булыжником");
-        Weapon.TakeDamage(monster);
+        Weapon.ApplyDamage(monster);
     }
 }

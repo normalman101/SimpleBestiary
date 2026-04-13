@@ -8,6 +8,6 @@ public class ForestSlime(uint health, IDamaging weapon) : MonsterBase(health, we
     public override void Action(MonsterBase monster)
     {
         Console.WriteLine("Лесной слизень прыгает, атакуя");
-        Weapon.TakeDamage(monster);
+        Weapon.ApplyDamage(monster);
     }
 }
