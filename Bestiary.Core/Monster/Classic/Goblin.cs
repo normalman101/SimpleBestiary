@@ -1,11 +1,13 @@
 ﻿using System;
+using Bestiary.Core.Monster.Weapon;
 
 namespace Bestiary.Core.Monster.Classic;
 
-public class Goblin : IMonster
+public class Goblin(uint health, IDamaging weapon) : MonsterBase(health, weapon)
 {
-    public void Action()
+    public override void Action(MonsterBase monster)
     {
         Console.WriteLine("Гоблин тычет ножом");
+        Weapon.TakeDamage(monster);
     }
 }

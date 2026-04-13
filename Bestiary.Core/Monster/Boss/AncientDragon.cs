@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Bestiary.Core.Monster;
+namespace Bestiary.Core.Monster.Boss;
 
 public class AncientDragon 
 {

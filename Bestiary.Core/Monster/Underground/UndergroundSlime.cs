@@ -1,11 +1,13 @@
 ﻿using System;
+using Bestiary.Core.Monster.Weapon;
 
 namespace Bestiary.Core.Monster.Underground;
 
-public class UndergroundSlime : IMonster
+public class UndergroundSlime(uint health, IDamaging weapon) : MonsterBase(health, weapon)
 {
-    public void Action()
+    public override void Action(MonsterBase monster)
     {
         Console.WriteLine("Подземный слизень прыгает, атакуя");
+        Weapon.TakeDamage(monster);
     }
 }

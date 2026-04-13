@@ -1,11 +1,13 @@
 ﻿using System;
+using Bestiary.Core.Monster.Weapon;
 
 namespace Bestiary.Core.Monster.Forest;
 
-public class ForestOrc : IMonster
+public class ForestOrc(uint health, IDamaging weapon) : MonsterBase(health, weapon)
 {
-    public void Action()
+    public override void Action(MonsterBase monster)
     {
         Console.WriteLine("Лесной орк замахивается деревом");
+        Weapon.TakeDamage(monster);
     }
 }

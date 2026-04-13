@@ -1,20 +1,21 @@
 ﻿using Bestiary.Core.Monster.Forest;
+using Bestiary.Core.Monster.Weapon;
 
 namespace Bestiary.Core.Monster.Factory;
 
 public class ForestMonsterFactory : IFactory
 {
-    public IMonster CreateCreeper() => new ForestCreeper();
+    public MonsterBase CreateCreeper(uint health, IDamaging weapon) => new ForestCreeper(health, weapon);
 
-    public IMonster CreateEnderman() => new ForestEnderman();
+    public MonsterBase CreateEnderman(uint health, IDamaging weapon) => new ForestEnderman(health, weapon);
 
-    public IMonster CreateGoblin() => new ForestGoblin();
+    public MonsterBase CreateGoblin(uint health, IDamaging weapon) => new ForestGoblin(health, weapon);
 
-    public IMonster CreateOrc() => new ForestOrc();
+    public MonsterBase CreateOrc(uint health, IDamaging weapon) => new ForestOrc(health, weapon);
 
-    public IMonster CreateSkeleton() => new ForestSkeleton();
+    public MonsterBase CreateSkeleton(uint health, IDamaging weapon) => new ForestSkeleton(health, weapon);
 
-    public IMonster CreateSlime() => new ForestSlime();
+    public MonsterBase CreateSlime(uint health, IDamaging weapon) => new ForestSlime(health, weapon);
 
-    public IMonster CreateTroll() => new ForestTroll();
+    public MonsterBase CreateTroll(uint health, IDamaging weapon) => new ForestTroll(health, weapon);
 }

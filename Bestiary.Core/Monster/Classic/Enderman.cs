@@ -1,11 +1,14 @@
 ﻿using System;
+using Bestiary.Core.Monster.Weapon;
 
 namespace Bestiary.Core.Monster.Classic;
 
-public class Enderman : IMonster
+public class Enderman(uint health, IDamaging weapon) : MonsterBase(health, weapon)
 {
-    public void Action()
+    
+    public override void Action(MonsterBase monster)
     {
         Console.WriteLine("Эндермен атакует, телепортируясь");
+        Weapon.TakeDamage(monster);
     }
 }

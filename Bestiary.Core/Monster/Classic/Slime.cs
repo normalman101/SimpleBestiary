@@ -1,11 +1,13 @@
 ﻿using System;
+using Bestiary.Core.Monster.Weapon;
 
 namespace Bestiary.Core.Monster.Classic;
 
-public class Slime : IMonster
+public class Slime(uint health, IDamaging weapon) : MonsterBase(health, weapon)
 {
-    public void Action()
+    public override void Action(MonsterBase monster)
     {
         Console.WriteLine("Слизень прыгает, атакуя");
+        Weapon.TakeDamage(monster);
     }
 }

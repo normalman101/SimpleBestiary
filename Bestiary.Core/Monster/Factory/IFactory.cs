@@ -1,18 +1,20 @@
-﻿namespace Bestiary.Core.Monster.Factory;
+﻿using Bestiary.Core.Monster.Weapon;
+
+namespace Bestiary.Core.Monster.Factory;
 
 public interface IFactory
 {
-    IMonster CreateCreeper();
+    MonsterBase CreateCreeper(uint health, IDamaging weapon);
 
-    IMonster CreateEnderman();
+    MonsterBase CreateEnderman(uint health, IDamaging weapon);
 
-    IMonster CreateGoblin();
+    MonsterBase CreateGoblin(uint health, IDamaging weapon);
 
-    IMonster CreateOrc();
+    MonsterBase CreateOrc(uint health, IDamaging weapon);
 
-    IMonster CreateSkeleton();
+    MonsterBase CreateSkeleton(uint health, IDamaging weapon);
 
-    IMonster CreateSlime();
+    MonsterBase CreateSlime(uint health, IDamaging weapon);
 
-    IMonster CreateTroll();
+    MonsterBase CreateTroll(uint health, IDamaging weapon);
 }

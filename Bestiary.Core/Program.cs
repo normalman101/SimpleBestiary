@@ -1,17 +1,12 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Bestiary.Core.Monster;
+using Bestiary.Core.Monster.Boss;
+using Bestiary.Core.Monster.Forest;
+using Bestiary.Core.Monster.Weapon;
 
-Boss boss = new Boss.Builder()
-    .SetName("Boss")
-    .SetHealth(200)
-    .SetAgility(1)
-    .SetArmorType("Silver")
-    .SetElement("Fire")
-    .Build();
+var Monster2 = new ForestCreeper(100, new Bomb());
+var Monster1 = new ForestGoblin(100, new Sword());
 
-
-var dragon = new AncientDragon();
-var dragonWrapper = new AncientDragonAdapter(dragon);
-
-var monsters2 = new List<IMonster> {boss, dragonWrapper};
-monsters2.ForEach(m => m.Action());
+Monster2.Action(Monster1);
+Console.WriteLine(Monster1.Health);

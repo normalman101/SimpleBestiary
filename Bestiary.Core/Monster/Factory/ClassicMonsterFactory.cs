@@ -1,20 +1,21 @@
 ﻿using Bestiary.Core.Monster.Classic;
+using Bestiary.Core.Monster.Weapon;
 
 namespace Bestiary.Core.Monster.Factory;
 
 public class ClassicMonsterFactory : IFactory
 {
-    public IMonster CreateCreeper() => new Creeper();
+    public MonsterBase CreateCreeper(uint health, IDamaging weapon) => new Creeper(health, weapon);
 
-    public IMonster CreateEnderman() => new Enderman();
+    public MonsterBase CreateEnderman(uint health, IDamaging weapon) => new Enderman(health, weapon);
 
-    public IMonster CreateGoblin() => new Goblin();
+    public MonsterBase CreateGoblin(uint health, IDamaging weapon) => new Goblin(health, weapon);
 
-    public IMonster CreateOrc() => new Orc();
+    public MonsterBase CreateOrc(uint health, IDamaging weapon) => new Orc(health, weapon);
 
-    public IMonster CreateSkeleton() => new Skeleton();
+    public MonsterBase CreateSkeleton(uint health, IDamaging weapon) => new Skeleton(health, weapon);
 
-    public IMonster CreateSlime() => new Slime();
+    public MonsterBase CreateSlime(uint health, IDamaging weapon) => new Slime(health, weapon);
 
-    public IMonster CreateTroll() => new Troll();
+    public MonsterBase CreateTroll(uint health, IDamaging weapon) => new Troll(health, weapon);
 }

@@ -1,11 +1,11 @@
 ﻿using System;
+using Bestiary.Core.Monster.Weapon;
 
-namespace Bestiary.Core.Monster;
+namespace Bestiary.Core.Monster.Boss;
 
-public class Boss : IMonster
+public class ClassicBoss(uint health, IDamaging weapon) : MonsterBase(health, weapon)
 {
     public string? Name { get; private set; }
-    public uint? Health { get; private set; }
     public uint? Mana { get; private set; }
     public uint? Strength { get; private set; }
     public uint? Agility { get; private set; }
@@ -16,9 +16,14 @@ public class Boss : IMonster
     public bool? IsImmortal { get; private set; }
     public string? SpecialAbilityName { get; private set; }
 
-    public class Builder
+    public override void Action(MonsterBase monster)
     {
-        private readonly Boss _product = new Boss();
+        Console.WriteLine("Бъёт кувалдой");
+    }
+    
+    public class Builder(uint health, IDamaging weapon)
+    {
+        private readonly ClassicBoss _product = new ClassicBoss(health, weapon);
         
         public Builder SetName(string name)
         {
@@ -86,12 +91,7 @@ public class Boss : IMonster
             return this;
         }
 
-        public Boss Build() => _product;
+        public ClassicBoss Build() => _product;
 
-    }
-
-    public void Action()
-    {
-        Console.WriteLine("Бъёт кувалдой");
     }
 }
