@@ -14,6 +14,11 @@ var horde = new MonsterHorde()
     .Add(monster2)
     .Add(monster3);
 
+var monster4 = new Orc(250, new Classic(), new Bow());
+var monster5 = new Slime(20, new Forest(), new Fists());
+
+var horde2 = new MonsterHorde().Add(monster4).Add(monster5);
+
 var target = new Enderman(100, new Classic(), new Fists());
 
 var hordesAndIndividuals = new List<IDamaging>
@@ -21,7 +26,7 @@ var hordesAndIndividuals = new List<IDamaging>
     monster1,
     monster2,
     monster3,
-    horde
+    horde.Add(horde2)
 };
 
 foreach (var element in hordesAndIndividuals)

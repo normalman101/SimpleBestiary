@@ -5,11 +5,11 @@ namespace Bestiary.Core.Monster;
 
 public class MonsterHorde() : IDamaging
 {
-    public List<MonsterBase> Horde { get; } = [];
+    public List<IDamaging> Horde { get; } = [];
 
-    public MonsterHorde Add(MonsterBase monster)
+    public MonsterHorde Add(IDamaging element)
     {
-        Horde.Add(monster);
+        Horde.Add(element);
         return this;
     }
     public void ApplyDamage(MonsterBase monster) => Horde.ForEach(m => m.ApplyDamage(monster));
