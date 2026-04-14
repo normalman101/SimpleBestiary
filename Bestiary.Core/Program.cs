@@ -1,10 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Xml;
-using Bestiary.Core.Biomes;
 using Bestiary.Core.Entities;
-using Bestiary.Core.Entities.Monsters;
 using Bestiary.Core.Items.Loot;
 using Bestiary.Core.Items.Weapons;
 
@@ -17,6 +12,7 @@ var bag = new Bag("Simple bag", 3);
 var potion2 = new Potion("Jumper", 7);
 
 bag.Add(potion).Add(weapon2);
-character.AddInLooseItems(weapon);
-character.AddInBags(bag).AddInBags(potion2);
+var bag2 = new Bag("Complex bag", 2);
+bag2.Add(weapon).Add(bag);
+character.Add(bag).Add(potion2).Add(bag2);
 Console.WriteLine(character.CalculateTotalWeight());
