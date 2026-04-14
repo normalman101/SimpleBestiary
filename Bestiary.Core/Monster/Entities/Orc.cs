@@ -4,9 +4,9 @@ using Bestiary.Core.Monster.Weapon;
 
 namespace Bestiary.Core.Monster.Classic;
 
-public class Orc(uint health, IBiome biome, IDamaging weapon) : MonsterBase(health, biome, weapon)
+public class Orc(int health, IBiome biome, IDamaging weapon) : MonsterBase(health, biome, weapon)
 {
-    public override void Action(MonsterBase monster)
+    public override void ApplyDamage(MonsterBase monster)
     {
         Console.WriteLine("Орк замахивается дубиной");
         Weapon.ApplyDamage(monster);

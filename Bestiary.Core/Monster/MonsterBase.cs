@@ -3,10 +3,15 @@ using Bestiary.Core.Monster.Weapon;
 
 namespace Bestiary.Core.Monster;
 
-public abstract class MonsterBase(uint health, IBiome biome, IDamaging weapon)
+public abstract class MonsterBase(int health, IBiome biome, IDamaging weapon) : IDamaging
 {
-    public uint Health { get; set; } = health;
+    public int Health
+    {
+        get;
+        set => field = value < 0 ? 0 : value;
+    } = health;
+
     public IBiome Biome { get; } = biome;
     public IDamaging Weapon { get; } = weapon;
-    public abstract void Action(MonsterBase monster);
+    public abstract void ApplyDamage(MonsterBase monster);
 }

@@ -4,7 +4,7 @@ using Bestiary.Core.Monster.Weapon;
 
 namespace Bestiary.Core.Monster.Boss;
 
-public class ClassicBoss(uint health, IBiome biome, IDamaging weapon) : MonsterBase(health, biome, weapon)
+public class ClassicBoss(int health, IBiome biome, IDamaging weapon) : MonsterBase(health, biome, weapon)
 {
     public string? Name { get; private set; }
     public uint? Mana { get; private set; }
@@ -16,13 +16,14 @@ public class ClassicBoss(uint health, IBiome biome, IDamaging weapon) : MonsterB
     public string? Element { get; private set; }
     public bool? IsImmortal { get; private set; }
     public string? SpecialAbilityName { get; private set; }
-
-    public override void Action(MonsterBase monster)
+    
+    public override void ApplyDamage(MonsterBase monster)
     {
         Console.WriteLine("Бъёт кувалдой");
+        Weapon.ApplyDamage(monster);
     }
     
-    public class Builder(uint health, IBiome biome, IDamaging weapon)
+    public class Builder(int health, IBiome biome, IDamaging weapon)
     {
         private readonly ClassicBoss _product = new ClassicBoss(health, biome, weapon);
         
@@ -32,7 +33,7 @@ public class ClassicBoss(uint health, IBiome biome, IDamaging weapon) : MonsterB
             return this;
         }
 
-        public Builder SetHealth(uint health)
+        public Builder SetHealth(int health)
         {
             _product.Health = health;
             return this;

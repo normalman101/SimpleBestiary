@@ -4,9 +4,9 @@ using Bestiary.Core.Monster.Weapon;
 
 namespace Bestiary.Core.Monster.Entities;
 
-public class Creeper(uint health, IBiome biome, IDamaging weapon) : MonsterBase(health, biome, weapon)
+public class Creeper(int health, IBiome biome, IDamaging weapon) : MonsterBase(health, biome, weapon)
 {
-    public override void Action(MonsterBase monster)
+    public override void ApplyDamage(MonsterBase monster)
     {
         Console.WriteLine("Крипер шахидничает");
         Weapon.ApplyDamage(monster);
