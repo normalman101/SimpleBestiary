@@ -1,38 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
-using Bestiary.Core.Monster;
-using Bestiary.Core.Monster.Biome;
-using Bestiary.Core.Monster.Classic;
-using Bestiary.Core.Monster.Entities;
-using Bestiary.Core.Monster.Weapon;
-
-var monster2 = new Creeper(100, new Forest(), new Bomb());
-var monster1 = new Goblin(100, new Forest(), new Sword());
-var monster3 = new Troll(200, new Underground(), new Fists());
-var horde = new MonsterHorde()
-    .Add(monster1)
-    .Add(monster2)
-    .Add(monster3);
-
-var monster4 = new Orc(250, new Classic(), new Bow());
-var monster5 = new Slime(20, new Forest(), new Fists());
-
-var horde2 = new MonsterHorde().Add(monster4).Add(monster5);
-
-var target = new Enderman(100, new Classic(), new Fists());
-
-var hordesAndIndividuals = new List<IDamaging>
-{
-    monster1,
-    monster2,
-    monster3,
-    horde.Add(horde2)
-};
-
-foreach (var element in hordesAndIndividuals)
-{
-    element.ApplyDamage(target);
-}
+using System.Linq;
+using System.Xml;
+using Bestiary.Core.Biomes;
+using Bestiary.Core.Entities;
+using Bestiary.Core.Entities.Monsters;
+using Bestiary.Core.Items.Loot;
+using Bestiary.Core.Items.Weapons;
 
 
-Console.WriteLine(target.Health);
+var character = new Character();
+var weapon = new Sword("The Greatest", 25);
+var potion = new Potion("Healthy", 5);
+var weapon2 = new Bow("Long", 34);
+var bag = new Bag("Simple bag", 3);
+var potion2 = new Potion("Jumper", 7);
+
+bag.Add(potion).Add(weapon2);
+character.AddInLooseItems(weapon);
+character.AddInBags(bag).AddInBags(potion2);
+Console.WriteLine(character.CalculateTotalWeight());

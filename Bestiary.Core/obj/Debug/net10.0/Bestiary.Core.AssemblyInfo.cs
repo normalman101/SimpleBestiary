@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Bestiary.Core")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+50623e0a0db44746183b8d608fb453e3df85a95c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f56935b5b4484489a23537176e32bfba06217a89")]
 [assembly: System.Reflection.AssemblyProductAttribute("Bestiary.Core")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Bestiary.Core")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
